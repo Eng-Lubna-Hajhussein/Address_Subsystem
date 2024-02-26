@@ -27,9 +27,15 @@ const Town = ({
     handleOpen();
   };
   return (
-    <Grid container item xs={12} style={{ height: "20%" }}>
-      <Grid item xs={2}></Grid>
-      <Grid item xs={4}>
+    <Grid
+      container
+      item
+      xs={12}
+      justifyContent={"center"}
+      justifyItems={"center"}
+      py={5}
+    >
+      <Grid item xs={4} p={1}>
         <Towns
           countryID={countryID}
           PID={PID}
@@ -38,21 +44,28 @@ const Town = ({
           regionName={regionName}
         />
       </Grid>
-      <Grid item xs={1}></Grid>
-      <Grid item xs={1}>
-        <Button fullWidth variant="outlined" onClick={handleAdd}>
+      <Grid item xs={1} p={1}>
+        <Button
+          sx={{ height: "55px" }}
+          fullWidth
+          variant="outlined"
+          onClick={handleAdd}
+        >
           <Add fontSize="small" /> ADD{" "}
         </Button>
       </Grid>
-      <Grid item xs={1}></Grid>
-      <Grid item xs={1}>
+      <Grid item xs={1} p={1}>
         {townID !== "" && (
-          <Button fullWidth variant="outlined" onClick={handleEdit}>
+          <Button
+            sx={{ height: "55px" }}
+            fullWidth
+            variant="outlined"
+            onClick={handleEdit}
+          >
             <Edit fontSize="small" /> EDIT{" "}
           </Button>
         )}
       </Grid>
-      <Grid item xs={2}></Grid>
       <Modal key={townID} open={open} onClose={handleClose}>
         {
           <>

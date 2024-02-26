@@ -1,10 +1,16 @@
+import { Grid } from "@mui/material";
 import Country from "./regions/Country";
 
 const Regions = () => {
   return (
-    <div>
+    <Grid
+    container
+    sx={{
+      paddingLeft: "150px",
+      paddingTop: "100px",
+    }}>
       <Country />
-    </div>
+    </Grid>
   );
 };
 

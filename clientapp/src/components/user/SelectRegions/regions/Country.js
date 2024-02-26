@@ -32,14 +32,14 @@ const Country = ({ appRegionsID, regionName }) => {
   };
 
   return (
-    <Grid container spacing={1} direction="column">
+    <Grid container  direction="column" >
       {countriesID.map((ID) => (
         <div style={{ padding: 30 }} key={ID}>
           <Card
             style={{ maxWidth: 950, padding: "20px 5px", margin: "0 auto" }}
           >
             <CardContent>
-              <Grid xs={12} item>
+              <Grid xs={12} item >
                 <FormGroup>
                   <FormControlLabel
                     control={
@@ -70,7 +70,7 @@ const Country = ({ appRegionsID, regionName }) => {
           </Card>
         </div>
       ))}
-      <Grid container spacing={1} alignItems="center" justifyContent="center">
+      <Grid container  alignItems="center" justifyContent="center">
         <Grid item xs={6}>
           <Button
             component={Link}

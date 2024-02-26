@@ -25,30 +25,38 @@ const Country = ({
     handleOpen();
   };
   return (
-    <Grid container item xs={12} style={{ height: "20%" }}>
-      <Grid item xs={2}></Grid>
-      <Grid item xs={4}>
+    <Grid
+      container
+      item
+      xs={12}
+      justifyContent={"center"}
+      justifyItems={"center"}
+      py={5}
+    >
+      <Grid item xs={4} p={1}>
         <Countries
           selectCountry={selectCountry}
           appRegionsID={appRegionsID}
           regionName={regionName}
         />
       </Grid>
-      <Grid item xs={1}></Grid>
-      <Grid item xs={1}>
-        <Button fullWidth variant="outlined" onClick={handleAdd}>
+      <Grid item xs={1} p={1}>
+        <Button
+          fullWidth
+          variant="outlined"
+          sx={{ height: "55px" }}
+          onClick={handleAdd}
+        >
           <Add fontSize="small" /> ADD{" "}
         </Button>
       </Grid>
-      <Grid item xs={1}></Grid>
-      <Grid item xs={1}>
+      <Grid item xs={1} p={1}>
         {countryID !== "" && (
-          <Button fullWidth variant="outlined" onClick={handleEdit}>
+          <Button fullWidth sx={{ height: "55px" }} variant="outlined" onClick={handleEdit}>
             <Edit fontSize="small" /> EDIT{" "}
           </Button>
         )}
       </Grid>
-      <Grid item xs={2}></Grid>
       <Modal key={countryID} open={open} onClose={handleClose}>
         {
           <>

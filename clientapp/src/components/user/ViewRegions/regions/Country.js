@@ -55,7 +55,6 @@ const Country = () => {
           </Card>
         </div>
       ))}
-      <Grid item xs={2}></Grid>
     </Grid>
   );
 };
